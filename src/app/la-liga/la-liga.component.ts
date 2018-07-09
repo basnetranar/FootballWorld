@@ -18,8 +18,6 @@ export class LaLigaComponent implements OnInit {
   tempTable:table;
 
   ngOnInit() {
-
-  	//2002 - bundesliga, 2019 seria, 2015 frenchLeauge,  2021 england
   	
   	this.http.get(this.baseUrl,{headers: new HttpHeaders().set(this.auth,this.key)})
   		.subscribe(res => {

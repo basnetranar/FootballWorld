@@ -20,13 +20,9 @@ baseUrl:string = 'http://api.football-data.org/v2/competitions/2015/standings';
 
   ngOnInit() {
 
-  	//2002 - bundesliga, 2019 seria, 2015 frenchLeauge,  2021 england
-  	//2000,2001,2002,2003,2013,2014,2015,2016,2017,2018,2019,2021
   	//http.get request and assign headers for the request
   	this.http.get(this.baseUrl,{headers: new HttpHeaders().set(this.auth,this.key)}) 
   		.subscribe(res => {
-
-  			console.log(res);
 
   			//organize the datas from the response
   			//first check if standings/table has any data

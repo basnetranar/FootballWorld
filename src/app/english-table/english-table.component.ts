@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpHeaders, HttpClient} from '@angular/common/http';
+import {HttpClient,HttpHeaders} from "@angular/common/http";
 import {table} from "../table";
 
-
 @Component({
-  selector: 'app-italian-seria',
-  templateUrl: './italian-seria.component.html',
-  styleUrls: ['./italian-seria.component.css']
+  selector: 'app-english-table',
+  templateUrl: './english-table.component.html',
+  styleUrls: ['./english-table.component.css']
 })
-export class ItalianSeriaComponent implements OnInit {
+export class EnglishTableComponent implements OnInit {
 
-	baseUrl:string = 'http://api.football-data.org/v2/competitions/2019/standings';
- 	auth:string = "X-Auth-Token";
- 	key:string = 'b12b9f38b6364eef9bf114fa054a82a1'; 
+baseUrl:string = 'http://api.football-data.org/v2/competitions/2021/standings';
+ auth:string = "X-Auth-Token";
+ key:string = 'b12b9f38b6364eef9bf114fa054a82a1';
 
   constructor(private http:HttpClient) { }
 
@@ -20,7 +19,7 @@ export class ItalianSeriaComponent implements OnInit {
   tempTable:table; //temporary object to store each teams data
 
   ngOnInit() {
-
+  	
   	//http.get request and assign headers for the request
   	this.http.get(this.baseUrl,{headers: new HttpHeaders().set(this.auth,this.key)}) 
   		.subscribe(res => {
@@ -49,3 +48,4 @@ export class ItalianSeriaComponent implements OnInit {
   		});
   }
 }
+

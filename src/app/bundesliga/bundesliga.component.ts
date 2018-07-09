@@ -8,6 +8,7 @@ import {table} from "../table";
   styleUrls: ['./bundesliga.component.css']
 })
 export class BundesligaComponent implements OnInit {
+ 
  baseUrl:string = 'http://api.football-data.org/v2/competitions/2002/standings';
  auth:string = "X-Auth-Token";
  key:string = 'b12b9f38b6364eef9bf114fa054a82a1';
@@ -17,17 +18,14 @@ export class BundesligaComponent implements OnInit {
   tempTable:table;
 
   ngOnInit() {
-
-  	//2002 - bundesliga, 2019 seria, 2015 frenchLeauge,  2021 england
   	
   	this.http.get(this.baseUrl,{headers: new HttpHeaders().set(this.auth,this.key)})
   		.subscribe(res => {
-  			console.log(res);
+  			
+  			//check if the standing table has any data
   			if(res['standings'].length != 0){
-  				console.log(res['standings']);
-	  			console.log(res['standings'][0].table);
+
 	  			for (let teams in res['standings'][0].table ){
-	  				console.log(this.tempTable);
 	  				this.tempTable = {
 		  				team: res['standings'][0].table[teams].team.name,
 		  				matchesPlayed: res['standings'][0].table[teams].playedGames,
@@ -39,11 +37,11 @@ export class BundesligaComponent implements OnInit {
 						position: res['standings'][0].table[teams].position,
 						points: res['standings'][0].table[teams].points,
 						goalDifference: res['standings'][0].table[teams].goalDifference
-					}
+					};
 					this.tableFinal.push(this.tempTable);
 				};
 
-  			} else{console.log("empty data");};
+  			}
   		
 
   		});

@@ -10,6 +10,8 @@ import { LaLigaComponent } from './la-liga/la-liga.component';
 import { BundesligaComponent } from './bundesliga/bundesliga.component';
 import { ItalianSeriaComponent } from './italian-seria/italian-seria.component';
 import { FrenchLeagueComponent } from './french-league/french-league.component';
+import { EnglishTableComponent } from './english-table/english-table.component';
+import { EnglishStatsComponent } from './english-stats/english-stats.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FrenchLeagueComponent } from './french-league/french-league.component';
     LaLigaComponent,
     BundesligaComponent,
     ItalianSeriaComponent,
-    FrenchLeagueComponent
+    FrenchLeagueComponent,
+    EnglishTableComponent,
+    EnglishStatsComponent
   ],
   imports: [
     BrowserModule,

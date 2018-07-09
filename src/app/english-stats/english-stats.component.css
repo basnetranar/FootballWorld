@@ -1,0 +1,13 @@
+.teamLayout{
+	font-size: 1.3em;
+	font-weight: bold;
+	font-family: "Times New Roman", serif;
+	color: blueviolet;
+	cursor: pointer;
+	margin-top: 1em;
+}
+
+.infoSize{
+	font-size: 1.4em;
+	font-family: "Times New Roman", serif;
+}

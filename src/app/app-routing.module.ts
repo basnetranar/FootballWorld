@@ -5,15 +5,22 @@ import { LaLigaComponent } from './la-liga/la-liga.component';
 import { BundesligaComponent } from './bundesliga/bundesliga.component';
 import { ItalianSeriaComponent } from './italian-seria/italian-seria.component';
 import { FrenchLeagueComponent } from './french-league/french-league.component';
+import { EnglishTableComponent } from './english-table/english-table.component';
+import { EnglishStatsComponent } from './english-stats/english-stats.component';
 
 const routes: Routes = [
 	{
-		path:(""),
-		component: PremierLeagueComponent
+		path:(""), redirectTo: "premierLeague", pathMatch: 'full'
 	},
 	{
 		path:("premierLeague"),
-		component: PremierLeagueComponent
+		component: PremierLeagueComponent,
+
+		children: [
+		{path: (""), redirectTo: "table", pathMatch: 'full'},
+		{path: ("table"), component: EnglishTableComponent},
+		{path: ("stats"), component: EnglishStatsComponent}
+		]
 	},
 	{
 		path:("laLiga"),

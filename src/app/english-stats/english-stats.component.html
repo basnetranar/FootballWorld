@@ -1,0 +1,74 @@
+<!-- List all the teams and assign description with function teamInfo-->
+<div class="row">
+	<div class="col-md-3 teamLayout">
+		  <ul style="list-style-type: none" *ngFor='let team of allTeams; let i = index'>
+		    <li (click) = "teamInfo(i)">{{team.name}}</li>
+		  </ul>
+	</div>
+	<br> <br> <br> <br> <br><br><br><br>
+	<div class="col-md-4 bg-info infoSize">
+		<br> <br>
+		<div class="row ">
+			<div class="col-md-3 text-right">
+				Name:
+				
+			</div>
+			<div class="col-md-9">
+				{{teamName}}
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-right">
+				Founded:
+				
+			</div>
+			<div class="col-md-9">
+				{{teamFounded}}
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-right">
+				Address:
+				
+			</div>
+			<div class="col-md-9">
+				{{teamAddress}}
+			</div>
+
+		</div>
+		<div class="row">
+			<a [href]="'mailto:' + teamEmail">
+			<div class="col-md-3 text-right">
+				Email:
+				
+			</div>
+			<div class="col-md-9">
+				{{teamEmail}}
+			</div>
+			</a>
+
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-right">
+				Website:
+				
+			</div>
+			<div class="col-md-9">
+				<a href="{{teamWebsite}}" target="_blank"> {{teamWebsite}}</a>
+			</div>
+
+		</div> <br> <br>
+		
+	</div>
+
+	<div class="col-md-4" align="center">
+		<img src="../../assets/images/{{teamName}}.png">
+	</div>
+
+</div>
+
+
+
+
