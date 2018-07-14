@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient,HttpHeaders} from "@angular/common/http";
-import {table} from "../table";
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-premier-league',

@@ -20,7 +20,7 @@ baseUrl:string = 'http://api.football-data.org/v2/competitions/2021/standings';
 
   ngOnInit() {
   	
-  	//http.get request and assign headers for the request
+  	// http.get request and assign headers for the request
   	this.http.get(this.baseUrl,{headers: new HttpHeaders().set(this.auth,this.key)}) 
   		.subscribe(res => {
 

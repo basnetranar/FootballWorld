@@ -1,0 +1,17 @@
+.selectGameweek{
+	color:#37584f;
+}
+.selectGameweek:hover{
+	color:#d80e47;
+}
+.tableHeading{
+	color: #374377;
+	background-color: #a5dfda;
+	font-size: 1.2em;
+}
+
+.tableBody{
+	background-color: #c8cbcb;
+	color: #333ed1;
+	font-size: 1.05em;
+}

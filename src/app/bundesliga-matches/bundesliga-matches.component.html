@@ -1,0 +1,94 @@
+
+<br>
+<div class="row ">
+	<div class="col-md-3 text-center">
+		<label for="week1-9">Week 1-9</label>:
+		<select id="week1-9" (change) = "displayMatches($event.target.value)" class="selectGameweek">
+		    <option value="00" >Week 1</option>
+		    <option value="01">Week 2</option>
+		    <option value="02">Week 3</option>
+		    <option value="03">Week 4</option>
+		    <option value="04">Week 5</option>
+		    <option value="05">Week 6</option>
+		    <option value="06">Week 7</option>
+		    <option value="07">Week 8</option>
+		    <option value="08">Week 9</option>
+		    
+		</select>
+	</div>
+
+	<div class="col-md-3 text-center">
+		<label for="week10-18">Week 10-18:</label>
+		<select id="week10-18" (change) = "displayMatches($event.target.value)" class="selectGameweek">
+			<option value="09">Week 10</option>
+		    <option value="10">Week 11</option>
+		    <option value="11">Week 12</option>
+		    <option value="12">Week 13</option>
+		    <option value="13">Week 14</option>
+		    <option value="14">Week 15</option>
+		    <option value="15">Week 16</option>
+		    <option value="16">Week 17</option>
+		    <option value="17">Week 18</option>
+		    
+		    <option value="none" selected>--Select a Gameweek--</option>
+		</select>
+	</div>
+
+	<div class="col-md-3 text-center">
+		<label for="week19-27">Week 19-27:</label>
+		<select id="week19-27" (change) = "displayMatches($event.target.value)" class="selectGameweek">
+			<option value="18">Week 19</option>
+		    <option value="19">Week 20</option>
+		    <option value="20" >Week 21</option>
+		    <option value="21">Week 22</option>
+		    <option value="22">Week 23</option>
+		    <option value="23">Week 24</option>
+		    <option value="24">Week 25</option>
+		    <option value="25">Week 26</option>
+		    <option value="26">Week 27</option>
+		    
+		    <option value="none" selected>--Select a Gameweek--</option>
+		</select>
+	</div>
+
+	<div class="col-md-3 text-center">
+		<label for="week28-34">Week 28-34:</label>
+		<select id="week28-34" (change) = "displayMatches($event.target.value)" class="selectGameweek">
+			<option value="27">Week 28</option>
+		    <option value="28">Week 29</option>
+		    <option value="29">Week 30</option>
+		    <option value="30">Week 31</option>
+		    <option value="31">Week 32</option>
+		    <option value="32">Week 33</option>
+		    <option value="33">Week 34</option>
+		    <option value="none" selected>--Select a Gameweek--</option>
+		</select>
+	</div>
+</div>
+
+<!-- <h3 class="text-danger">Gameweek: {{gameWeek}}</h3> -->
+<br>
+<table class="table table-striped">
+	<thead class="tableHeading">
+		<tr>
+			<th>Date/Time</th>
+			<th>Home Team</th>
+			<th>Away Team</th>
+			<th>Score</th>
+		</tr>
+	</thead>
+	<tbody class="tableBody ">
+		<tr *ngFor="let matches of displayData">
+			<td>{{matches.date[0]}} / {{matches.date[1]}}</td>
+			<td>{{matches.homeTeam}}</td>
+			<td>{{matches.awayTeam}}</td>
+			<td>{{matches.score}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- <ul *ngFor="let matches of displayData">
+	<li>{{matches.homeTeam}}</li>
+	<li>{{matches.awayTeam}}</li>
+	<li>{{matches.score}}</li>
+	<li>{{matches.date}}</li>
+</ul> -->

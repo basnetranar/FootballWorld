@@ -1,9 +1,36 @@
-.textSize{
-	font-size: 1.5em;
-}
-.heading{
-	font-family: 'Alamendra';
-}
-.bgLight{
+
+.headerBackground{
 	background-color: white;
 }
+
+/*#leftFootball{
+	left: 0px;
+	transform: scale(0.2);
+	border-radius: 50%;
+	animation-name: ballScaleX;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+
+}
+#rightFootball{
+	text-align: right;
+	transform: scale(0.2);
+	border-radius: 50%;
+	animation-name: ballScaleY;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+@keyframes ballScaleX{
+	
+	50%{
+		transform: translateX(320px);
+		opacity: 0.5;
+	}
+}
+@keyframes ballScaleY{
+	
+	50%{
+		transform: translateX(-320px);
+		opacity: 0.5;
+	}
+}*/

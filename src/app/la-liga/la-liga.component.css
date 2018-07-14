@@ -1,0 +1,21 @@
+.secondaryNav{
+	font-size: 2em;
+	font-family: "Times New Roman", serif;
+	background-color: #91edf2;
+	width: 100%;
+	margin-left: 0.03em;
+}
+
+a:link {
+    color: #7620c5;
+}
+
+/* visited link */
+a:visited {
+    color: #2033c5;
+}
+
+/* mouse over link */
+a:hover {
+    color: #c520c5;
+}

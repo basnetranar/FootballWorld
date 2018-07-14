@@ -1,0 +1,49 @@
+.teamLayout{
+	background-color: #e3ead2;
+	font-family: "Times New Roman", serif;
+	font-size: 1.2em;
+	color:#4755f5;
+	width: 23%;
+	left: 1.1em;
+	cursor: pointer;
+}
+.eachTeam:hover{
+	color: red;
+}
+.infoSize{
+	font-size: 1.4em;
+	font-family: "Times New Roman", serif;
+}
+
+.teamLogo{
+	right: 0em;
+}
+.infoImageTable{
+	background-color: #d2eae8;
+	left: 1.2em;
+	width: 74.3%;
+}
+.teamInfo{
+	font-size: 1.1em; 
+	color:#0000EE;
+}
+.tableHeading{
+	background-color: gray;
+	font-size: 1.2em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	color:#c6c6c8;
+}
+.tableBody{
+	background-color: #d3d3d5;
+	color:#3d34df ;
+	font-size:1.1em;
+	margin-bottom: 0.5em;
+}
+.tableBody:hover{
+	background-color: white
+}
+.bodyDimension{
+	height: 485px;
+	overflow: scroll;
+}

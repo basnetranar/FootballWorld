@@ -1,0 +1,105 @@
+<!-- List all the teams and assign description with function teamInfo-->
+
+	<div class="row ">
+			<div class="col-md-3 teamLayout ">
+				<br>
+				  <ul style="list-style-type: none" *ngFor='let team of allTeams; let i = index'>
+				    <li class='eachTeam' (click) = "teamInfo(i)">{{team.name}}</li>
+				  </ul>
+			</div>
+
+		<div class="col-md-9 infoImageTable">
+				<div class="col-md-6 teamInfo">
+					<br>
+					<div class="row ">
+						<div class="col-md-3 text-right">
+							Name:
+							
+						</div>
+						<div class="col-md-9">
+							{{teamName}}
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-right">
+							Founded:
+							
+						</div>
+						<div class="col-md-9">
+							{{teamFounded}}
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-right">
+							Address:
+							
+						</div>
+						<div class="col-md-9">
+							{{teamAddress}}
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-right">
+							Email:
+						</div>
+
+						<a [href]="'mailto:' + teamEmail">
+						<div class="col-md-9">
+							{{teamEmail}}
+						</div>
+						</a>
+
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-right">
+							Website:
+							
+						</div>
+						<div class="col-md-9">
+							<a href="{{teamWebsite}}" target="_blank"> {{teamWebsite}}</a>
+						</div>
+					</div> 
+					<br>
+				</div> 
+			<!-- Ends the small column containing team's information -->
+				<div class="col-md-6 teamLogo" align="right">
+					<br>
+					<img src="../../assets/images/{{teamName}}.png" alt="{{teamName}}">
+					<br>
+				</div>
+		
+		<!-- Ends the table containing team logo -->
+		<!-- Still inside the col-md-9 -->
+
+		<div class="row">
+
+			<div class="col-md-12">
+					<div class="row tableHeading">
+						<div class="col-md-2 col-md-offset-1">Date</div>
+						<div class="col-md-2">Competition</div>
+						<div class="col-md-2">Home Team</div>
+						<div class="col-md-2">Alway Team</div>
+						<div class="col-md-2">Score</div>
+					</div>
+					<div class="bodyDimension">
+						<div class="row tableBody" *ngFor="let eachMatch of teamMatches">
+							<div class="col-md-2 col-md-offset-1">{{eachMatch.date[0]}} / {{eachMatch.date[1]}}</div>
+							<div class="col-md-2">{{eachMatch.competition}}</div>
+							<div class="col-md-2">{{eachMatch.homeTeam}}</div>
+							<div class="col-md-2">{{eachMatch.awayTeam}}</div>
+							<div class="col-md-2">{{eachMatch.score}}</div>
+							
+						</div>
+					</div>
+			</div>
+		</div>
+			
+		</div>
+	</div>	
+
+
+
+

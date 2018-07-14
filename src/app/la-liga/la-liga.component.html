@@ -1,37 +1,10 @@
-<!-- <div class="row textSize text-center">
-  <div class="col-md-2 col-md-offset-1"><a routerLink="premierLeague">Table</a></div>
-  <div class="col-md-2"><a routerLink="laLiga">Stats</a></div>
-  <div class="col-md-2"><a routerLink="bundesliga">Fixtures</a></div>
-</div> -->
+<br>
+<div class="container">
+	<div class="row secondaryNav" >
+	  <div class="col-md-4"><a routerLink="table">Table</a></div>
+	  <div class="col-md-4"><a routerLink="teams">Teams</a></div>
+	  <div class="col-md-4"><a routerLink="matches">Fixtures</a></div>
+	</div>
 
-<table class="table table-striped">
-	<thead class="thead-light ">
-		<tr>
-			<th scope="col">Position</th>
-			<th scope="col">Team</th>	
-			<th scope="col">Played</th>
-			<th scope="col">Won</th>	
-			<th scope="col">Draw</th>
-			<th scope="col">Lost</th>
-			<th scope="col">Goals Scored</th>
-			<th scope="col">Goals Against</th>
-			<th scope="col">Difference</th>
-			<th scope="col">Points</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor= 'let team of tableFinal'>
-			<td scope="col">{{team.position}}</td>
-			<td scope="col">{{team.team}}</td>
-			<td scope="col">{{team.matchesPlayed}}</td>
-			<td scope="col">{{team.won}}</td>
-			<td scope="col">{{team.drawn}}</td>
-			<td scope="col">{{team.lost}}</td>
-			<td scope="col">{{team.goalScored}}</td>
-			<td scope="col">{{team.goalAgainst}}</td>
-			<td scope="col">{{team.goalDifference}}</td>
-			<td scope="col">{{team.points}}</td>
-
-		</tr>
-	</tbody>
-</table>
+	<router-outlet></router-outlet>
+</div>
